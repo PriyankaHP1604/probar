@@ -1,38 +1,107 @@
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: url("https://img.freepik.com/free-photo/baby-fetus-womb_23-2151624610.jpg?t=st=1723743675~exp=1723747275~hmac=88f84afd9e5fd14010757dc72a608db4012e738b7ac3567d3a285791924d443d&w=900")
+    no-repeat center center fixed; /* Replace with the actual image URL */
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
+  padding: 50px;
+  color: white;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent background for readability */
+  border-radius: 15px;
+  margin: 50px auto;
+  width: 80%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Button Styles */
+.button-group {
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button-group button {
+  font-size: 20px;
+  padding: 15px 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button-group button:first-child {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-group button:last-child {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.button-group button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Progress Bar Styles */
+.progress-container {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #ddd;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  transform: rotateX(45deg);
+  perspective: 1000px;
+}
+
+.progress-bar {
+  height: 50px;
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  border-radius: 50px;
+  transition: width 1s ease, transform 1s ease;
+  transform-origin: left;
+  transform: translateZ(40px) rotateX(-45deg);
+}
+
+/* Undo/Redo Button Styles */
+.undo-redo-group {
+  margin-top: 20px;
+}
+
+.undo-redo-group button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  color: white;
+}
+
+.undo-redo-group button:first-child {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.undo-redo-group button:last-child {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+
+.undo-redo-group button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
